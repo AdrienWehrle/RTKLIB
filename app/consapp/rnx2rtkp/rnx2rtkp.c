@@ -21,7 +21,7 @@
 #include "rtklib.h"
 
 #define PROGNAME    "rnx2rtkp"          /* program name */
-#define MAXFILE     16                  /* max number of input files */
+#define MAXFILE     100                 /* max number of input files */
 
 /* help text -----------------------------------------------------------------*/
 static const char *help[]={
@@ -33,7 +33,8 @@ static const char *help[]={
 " The first RINEX OBS file shall contain receiver (rover) observations. For the",
 " relative mode, the second RINEX OBS file shall contain reference",
 " (base station) receiver observations. At least one RINEX NAV/GNAV/HNAV",
-" file shall be included in input files. To use SP3 precise ephemeris, specify",
+" file shall be included in input files. A maximum number of input files is 
+" currently set to 100. To use SP3 precise ephemeris, specify",
 " the path in the files. The extension of the SP3 file shall be .sp3 or .eph.",
 " All of the input file paths can include wild-cards (*). To avoid command",
 " line deployment of wild-cards, use \"...\" for paths with wild-cards.",
